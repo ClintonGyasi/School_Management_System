@@ -1,37 +1,46 @@
 <?php
-$servername = "localhost"; // MySQL server hostname or IP
-$username = "root";        // MySQL username
-$password = "L@njue123";   // MySQL password
-$dbname = "your_database_name"; // Database name
-$port = 3306;              // MySQL port (default is 3306)
+$servername = "localhost";  
+$username = "root";         
+$password = "L@njue123";    
+$dbname = "student"; // Assuming 'student' is your database name
+$port = 3306;               
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname, $port);
+$conn = new mysqli($servername, $username, $password, $Student, $port);
 
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-}
-echo "Connected successfully";
+} 
+echo "<h1>Connected successfully</h1>";
 
-// Example query to check database connection (only if the database and table exist)
-$sql = "SELECT * FROM your_table_name"; // Replace 'your_table_name' with your actual table name
+// Query to fetch data from the 'Class' table
+$sql = "SELECT * FROM Class"; // 'Class' is your table name
+$result = $conn->query($sql);
 
-// Check if the database exists and is accessible
-if ($conn->select_db($dbname)) {
-    $result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    // Start HTML table
+    echo "<table border='1'>
+    <tr>
+        <th>ID</th>
+        <th>Class Name</th> <!-- Update this based on your actual column names -->
+        <th>Description</th> <!-- Update this based on your actual column names -->
+    </tr>";
 
-    if ($result && $result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            echo "id: " . $row["id"] . " - Name: " . $row["name"] . "<br>"; // Adjust column names as needed
-        }
-    } else {
-        echo "0 results or query failed";
+    // Output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "<tr>
+        <td>" . $row["id"] . "</td> <!-- Replace 'id' with your actual column name -->
+        <td>" . $row["class_name"] . "</td> <!-- Replace 'class_name' with your actual column name -->
+        <td>" . $row["description"] . "</td> <!-- Replace 'description' with your actual column name -->
+        </tr>";
     }
+
+    // End HTML table
+    echo "</table>";
 } else {
-    echo "Database does not exist or is not accessible.";
+    echo "0 results";
 }
 
-// Close the connection
 $conn->close();
 ?>
