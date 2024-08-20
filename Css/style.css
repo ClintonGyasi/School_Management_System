@@ -3,3 +3,7 @@
     background-size:cover;
     background-attachment: fixed;
 }
+.black-fill{
+    background: rgba(54, 53, 53, 0.7);
+    min-height: 100vh;
+}
