@@ -7,13 +7,14 @@
 <link rel="stylesheet"	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 <link rel="stylesheet"href="css/style.css">
 
-<link rel="icon" href="imgs/pic2.jpeg" type="image/png">
+<link rel="icon" href="Imgs/pic2.jpeg" type="image/png">
 
 </head>
 <body class="body-home">
-    <div class="black-fill">
+    <div class="black-fill"><br /><br />
         <div class="container">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary"
+         id="homeNav">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
         <img src="Imgs/Final.png" width="50">
@@ -33,18 +34,44 @@
           <a class="nav-link" href="#">Contact</a>
         </li>
       </ul>
-    </div>
-    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-right mb-2 mb-lg-0">
       <li class="nav-item">
           <a class="nav-link" href="#">Login</a>
         </li>
         </ul>
+    </div>
   </div>
 </nav>
-        </div>
 
+<section class="welcome-text d-flex justify-content-center align-items-center flex-column">
+    <img src="Imgs/Final.png">
+    <h4>Welcome to New Life School</h4>
+    <p>In publishing and graphic design,
+    Lorem ipsum is a placeholder text commonly 
+    used to demonstrate the visual form of a document
+    or a typeface without relying on meaningful content.
+    Lorem ipsum may be used as a placeholder before the final copy is available.</p>
+
+</section>
+<section class="welcome-text d-flex justify-content-center align-items-center flex-column">
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="Img/Final.png" class="img-fluid rounded-start" alt="...">
     </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
 
+</section>
+        </div>
+    </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 
