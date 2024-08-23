@@ -35,3 +35,41 @@
     padding: 5px;
     border-radius: 4px;
 }
+
+#about {
+    min-height: 100vh;
+}
+
+#about .card-1 {
+    max-width: 600px;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#about .card-1 h5 {
+    font-family: "Great Vibes", cursive;
+    font-size: 28px;
+}
+
+#contact {
+    min-height: 100vh;
+}
+
+#contact form {
+    max-width: 600px;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#contact form h3 {
+    text-align: center;
+    font-family: "Great Vibes", cursive;
+}
+
+textarea {
+    resize: none
+}
